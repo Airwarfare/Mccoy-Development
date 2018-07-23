@@ -14,7 +14,7 @@ params [
     ["_projectile","",[""]],
     ["_index",0,[0]]
 ];
-
+diag_log format["Damage Source: %1 %2", _source, _unit];
 //Handle the tazer first (Top-Priority).
 if (!isNull _source) then {
     if (_source != _unit) then {
