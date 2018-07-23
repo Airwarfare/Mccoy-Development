@@ -12,9 +12,10 @@ params [
     ["_damage",0,[0]],
     ["_source",objNull,[objNull]],
     ["_projectile","",[""]],
-    ["_index",0,[0]]
+    ["_index",0,[0]],
+    ["_instigator", objNull, [objNull]],
+    ["_hitPoint", "", [""]]
 ];
-diag_log format["Damage Source: %1 %2", _source, _unit];
 //Handle the tazer first (Top-Priority).
 if (!isNull _source) then {
     if (_source != _unit) then {
@@ -43,6 +44,19 @@ if (!isNull _source) then {
                 _damage = 0;
             };
         };
+    };
+} else {
+    if(life_seatbelt) then {
+        _damage = _damage * 0.25;
+    } else {
+        _r = random[0,50,100] / 100;
+        if(_r <= .25) then {
+            player setUnconscious true;
+            [] spawn {
+                sleep 300; //5 Mins
+                player setUnconscious false;
+            };
+        };  
     };
 };
 
