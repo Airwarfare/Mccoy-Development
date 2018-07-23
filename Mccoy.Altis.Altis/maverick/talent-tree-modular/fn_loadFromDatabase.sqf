@@ -2,7 +2,7 @@ params [
     ["_unit", objNull, [objNull]]
 ];
 
-private _query = format ["SELECT exp_level, exp_total, exp_perkPoints, exp_perks FROM players WHERE playerid = '%1'", getPlayerUID _unit];
+private _query = format ["SELECT exp_level, exp_total, exp_perkPoints, exp_perks FROM players WHERE pid = '%1'", getPlayerUID _unit];
 
 diag_log ("Requesting player experience data for user ID " + (getPlayerUID _unit) + " | Query (1): " + _query);
 

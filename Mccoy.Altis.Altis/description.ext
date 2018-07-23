@@ -23,6 +23,7 @@ class RscTitles {
     #include "dialog\progress.hpp"
     #include "dialog\hud_nameTags.hpp"
     #include "dialog\hud_stats.hpp"
+    #include "maverick\talent-tree-modular\gui\_masterTitles.cpp"
 };
 
 class CfgFunctions {

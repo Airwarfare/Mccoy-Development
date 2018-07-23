@@ -30,23 +30,23 @@ switch (_which) do {
 
 	case 0: {
 		if (_toUpdate isEqualType []) then {breakOut "main"};
-		_query = format ["UPDATE players SET exp_level = '%1' WHERE playerid = '%2'", _toUpdate, _pid];
+		_query = format ["UPDATE players SET exp_level = '%1' WHERE pid = '%2'", _toUpdate, _pid];
 	};
 
 	case 1: {
 		if (_toUpdate isEqualType []) then {breakOut "main"};
-		_query = format ["UPDATE players SET exp_total = '%1' WHERE playerid = '%2'", _toUpdate, _pid];
+		_query = format ["UPDATE players SET exp_total = '%1' WHERE pid = '%2'", _toUpdate, _pid];
 	};
 
 	case 2: {
 		if (_toUpdate isEqualType []) then {breakOut "main"};
-		_query = format ["UPDATE players SET exp_perkPoints = '%1' WHERE playerid = '%2'", _toUpdate, _pid];
+		_query = format ["UPDATE players SET exp_perkPoints = '%1' WHERE pid = '%2'", _toUpdate, _pid];
 	};
 
 	case 3: {
 		if (_toUpdate isEqualType 0) then {breakOut "main"};
 		_toUpdate call mav_ttm_fnc_tinyIntConverter;
-		_query = format ["UPDATE players SET exp_perks = '%1' WHERE playerid = '%2'", _toUpdate, _pid];
+		_query = format ["UPDATE players SET exp_perks = '%1' WHERE pid = '%2'", _toUpdate, _pid];
 	};
 };
 
