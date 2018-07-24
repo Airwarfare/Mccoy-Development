@@ -19,6 +19,9 @@ class CfgServer {
     */
 };
 
+// Mavericks Navigation Script
+#include "maverick\maverick_master.cpp"
+
 class RscTitles {
     #include "dialog\progress.hpp"
     #include "dialog\hud_nameTags.hpp"
@@ -29,6 +32,7 @@ class RscTitles {
 class CfgFunctions {
     #include "Functions.hpp"
     #include "maverick\maverick_functions_master.cpp"
+	#include "maverick\maverick_functions_master.cpp"
 };
 
 class CfgSounds {
