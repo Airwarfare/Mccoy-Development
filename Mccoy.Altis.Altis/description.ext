@@ -34,6 +34,7 @@ class CfgFunctions {
 };
 
 class CfgSounds {
+    #include "maverick\navigation\sounds\voicepacks\male_en-en_1\sounds.cpp"
     sounds[] = {};
     class sirenLong {
         name = "sirenLong";

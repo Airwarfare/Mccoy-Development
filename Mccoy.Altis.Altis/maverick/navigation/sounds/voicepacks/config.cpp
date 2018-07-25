@@ -11,5 +11,5 @@
 */
 class soundInstructions {
 	// Voicepacks
-
+    #include "male_en-en_1\config.cpp"
 };
