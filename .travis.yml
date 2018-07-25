@@ -1,0 +1,10 @@
+language: python
+python:
+- '3.4'
+before_script:
+# Credits to ACE3 for these validators
+- wget https://www.dropbox.com/s/kn8sqh5un4z5wnb/validator.py
+- wget https://www.dropbox.com/s/uujxv5uesf8nh72/style_checker.py
+script:
+- python3 validator.py
+- python3 style_checker.py

@@ -9,11 +9,11 @@
 #
 # Normal rules
 #
-.*
 *~
 *.zip
 *.rar
 *.bak
+*.editorconfig
 
 #
 # Windows Files
