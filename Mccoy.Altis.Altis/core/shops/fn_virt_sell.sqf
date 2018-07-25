@@ -11,7 +11,7 @@ if ((lbCurSel 2402) isEqualTo -1) exitWith {};
 _type = lbData[2402,(lbCurSel 2402)];
 _price = M_CONFIG(getNumber,"VirtualItems",_type,"sellPrice");
 if (_price isEqualTo -1) exitWith {};
-
+diag_log format["%1 %2 %3 %4", _type, (ITEM_VALUE(_type)), typeName(_type), format ["life_inv_%1",M_CONFIG(getText,"VirtualItems","apple","variable")]];
 _amount = ctrlText 2405;
 if (!([_amount] call TON_fnc_isnumber)) exitWith {hint localize "STR_Shop_Virt_NoNum";};
 _amount = parseNumber (_amount);

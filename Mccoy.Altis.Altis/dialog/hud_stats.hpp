@@ -21,7 +21,8 @@ class playerHUD {
         Life_RscProgress_HUDWater,
         Life_RscText_HUDFood,
         Life_RscText_HUDHealth,
-        Life_RscText_HUDWater
+        Life_RscText_HUDWater,
+        Life_RscPicture_Seatbelt
     };
 
     /* Background */
@@ -84,5 +85,14 @@ class playerHUD {
         idc = 1202;
         text = "$STR_HUD_Water";
         x = 0.534723 * safezoneW + safezoneX;
+    };
+
+    class Life_RscPicture_Seatbelt: life_RscPicture {
+        idc = 2222;
+        text = "";
+        x = safeZoneX + safeZoneW - (pixelW * pixelGrid) * 12.25;
+        y = 0.5 - (pixelW * pixelGrid) * - 36;
+        w = pixelW * pixelGrid * 7;
+        h = pixelH * pixelGrid * 7;
     };
 };
