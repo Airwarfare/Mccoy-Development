@@ -524,6 +524,29 @@ class VirtualItems {
         edible = 100;
         icon = "icons\ico_redgull.paa";
     };
+    
+    class VeetaminWater {
+        variable = "VeetaminWater";
+        displayName = "Veetamin Water";
+        weight = 1;
+        buyPrice = 1500;
+        sellPrice = 200;
+        illegal = false;
+        edible = 100;
+        icon = "icons\ico_redgull.paa";
+    };
+    
+    class ShitHourEnergy {
+        variable = "ShitHourEnergy";
+        displayName = "Shit Hour Energy";
+        weight = 1;
+        buyPrice = 1500;
+        sellPrice = 200;
+        illegal = false;
+        edible = 100;
+        icon = "icons\ico_redgull.paa";
+    };
+
 
     class coffee {
         variable = "coffee";
