@@ -11,7 +11,7 @@ _veh = cursorObject;
 life_interrupted = false;
 if (isNull _veh) exitWith {};
 if ((_veh isKindOf "Car") || (_veh isKindOf "Ship") || (_veh isKindOf "Air")) then {
-    if (life_inv_toolkit > 0) then {
+    if(("ToolKit" in (items player)) || (life_inv_toolkit > 0)) then {
         life_action_inUse = true;
         _displayName = FETCH_CONFIG2(getText,"CfgVehicles",(typeOf _veh),"displayName");
         _upp = format [localize "STR_NOTF_Repairing",_displayName];
@@ -32,8 +32,9 @@ if ((_veh isKindOf "Car") || (_veh isKindOf "Ship") || (_veh isKindOf "Air")) th
                 player switchMove "AinvPknlMstpSnonWnonDnon_medic_1";
                 player playMoveNow "AinvPknlMstpSnonWnonDnon_medic_1";
             };
-
-            uiSleep 0.27;
+			
+			_delay = (mav_ttm_var_repair_speed * 0.3);
+            uiSleep _delay;
             _cP = _cP + 0.01;
             _progress progressSetPosition _cP;
             _pgText ctrlSetText format ["%3 (%1%2)...",round(_cP * 100),"%",_upp];
@@ -53,7 +54,9 @@ if ((_veh isKindOf "Car") || (_veh isKindOf "Ship") || (_veh isKindOf "Air")) th
 
         //Check if playerSide has infinite repair enabled
         if (playerSide isEqualTo civilian && (_sideRepairArray select 0) isEqualTo 0) then {
-            [false,"toolkit",1] call life_fnc_handleInv;
+			if (mav_ttm_var_repair_p == 0) then {
+				player removeItem "ToolKit";
+			};
         };
         if (playerSide isEqualTo west && (_sideRepairArray select 1) isEqualTo 0) then {
             [false,"toolkit",1] call life_fnc_handleInv;
