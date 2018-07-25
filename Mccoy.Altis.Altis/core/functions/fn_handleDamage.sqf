@@ -50,7 +50,7 @@ if (!isNull _source) then {
         if(life_seatbelt) then {
             _damage = _damage * 0.25;
         } else {
-            if(speed vehicle player >= 78) then {
+            if(_damage > 0.5) then {
                 _r = random[0,50,100] / 100;
                 if(_r <= .25) then {
                     player setUnconscious true;
