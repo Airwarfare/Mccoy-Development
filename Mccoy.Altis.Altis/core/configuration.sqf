@@ -56,8 +56,9 @@ life_storagePlacing = scriptNull;
 ****** Variables Added By IEthanHD *****
 *****************************
 */
-mav_ttm_var_civLoadout = 0; //--- BackPack
-mav_ttm_var_repair_speed = 1; //--- Repair Speed
+mav_ttm_var_civLoadout = 0; //--- BackPack Perk
+mav_ttm_var_repair_speed = 1; //--- Repair Speed Perk 
+mav_ttm_var_add_harvest = 0;  //--- Harvesting Rate Perk
 
 
 //Settings
