@@ -37,7 +37,7 @@ if(!hasInterface) exitWith {};
 			missionNamespace setVariable ["mav_gps_v_dialog_handlerBlockedUntil", diag_tickTime];
 
 			if (!dialog) then {
-				[] call mav_gps_fnc_initNavigation;
+				//[] call mav_gps_fnc_initNavigation;
 			};
 		};
 

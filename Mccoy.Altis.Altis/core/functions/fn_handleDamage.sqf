@@ -50,9 +50,9 @@ if (!isNull _source) then {
         if(life_seatbelt) then {
             _damage = _damage * 0.25;
         } else {
-            if(_damage > 0.5) then {
+            if(_damage > 0.35) then {
                 _r = random[0,50,100] / 100;
-                if(_r <= .25) then {
+                if(_r <= .40) then {
                     player setUnconscious true;
                     [] spawn {
                         _handle = ppEffectCreate["RadialBlur", 2010]; 
@@ -60,7 +60,7 @@ if (!isNull _source) then {
                         _handle ppEffectAdjust [0.01, 0.01, 0.06, 0.06];  
                         _handle ppEffectCommit 0;
                         player playMoveNow "kia_driver_mid01";
-                        sleep 60*3; //3 Mins
+                        sleep 180; //3 Mins
                         player setUnconscious false;
                         ppEffectDestroy _handle;
                         player switchMove "driver_offroad01";

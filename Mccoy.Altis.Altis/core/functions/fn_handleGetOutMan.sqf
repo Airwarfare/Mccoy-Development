@@ -19,9 +19,16 @@ _actions = actionIDs player;
 	_action = player actionParams _x;
 	if((_action select 0) find "Seatbelt" >= 0) then {
 		player removeAction _x;
+		if(life_seatbelt) then {
+			playSound "Unbuckle";
+		};
 		life_seatbelt = false;
 		_ctrl = LIFEctrl(2222);
 		_ctrl ctrlSetText "";
 		_ctrl ctrlCommit 0;
+		
+	};
+	if((_action select 0) find "Navigator" >= 0) then {
+		player removeAction _x;
 	};
 } forEach _actions
