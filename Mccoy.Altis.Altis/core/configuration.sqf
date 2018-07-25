@@ -54,7 +54,9 @@ life_storagePlacing = scriptNull;
 *****************************
 ****** Variables Added By IEthanHD *****
 *****************************
-mav_ttm_var_civLoadout = 0;
+mav_ttm_var_civLoadout = 0; //--- BackPack
+mav_ttm_var_repair_speed = 1; //--- Repair Speed
+
 
 //Settings
 life_settings_enableNewsBroadcast = profileNamespace getVariable ["life_enableNewsBroadcast",true];
