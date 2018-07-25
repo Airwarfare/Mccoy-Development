@@ -56,10 +56,27 @@ life_storagePlacing = scriptNull;
 ****** Variables Added By IEthanHD *****
 *****************************
 */
-mav_ttm_var_civLoadout = 0; //--- BackPack Perk
-mav_ttm_var_repair_speed = 1; //--- Repair Speed Perk 
-mav_ttm_var_add_harvest = 0;  //--- Harvesting Rate Perk
 
+//--- Using Mavericks OfpecTag
+mav_ttm_var_civLoadout = 0; //--- Scalar For BackPack Perk
+mav_ttm_var_repair_speed = 1; //--- Scalar For Repair Speed Perk 
+mav_ttm_var_add_harvest = 0;  //--- Scalar For Harvesting Rate Perk
+mav_ttm_var_canRevive = 1; //--- Scalar For CPR Perk
+mav_ttm_var_canReviveDefib = 1; //--- Scalar For Defib Perk
+mav_ttm_var_gatheringMultiplier = 1.0; //---Scalar Multiplier For Gathering
+mav_ttm_var_bb_a = .25; //--- //---Scalar Multiplier For Bloodbags
+
+//--- Using Own OfpecTag
+IEthanHD_Food_Consumption = 1; //---
+IEthanHD_Gatherer_Add = 0; //--- Scalar For Adding To The Harvest Function
+IEthanHD_Drinks_1 = false; //--- Bool For Drinks Perk
+IEthanHD_Drinks_2 = false; //--- Bool For Drinks Perk
+IEthanHD_Drinks_3 = false; //--- Bool ForDrinks Perk
+ /*
+*****************************
+****** Variables Added By IEthanHD END *****
+*****************************
+*/
 
 //Settings
 life_settings_enableNewsBroadcast = profileNamespace getVariable ["life_enableNewsBroadcast",true];
