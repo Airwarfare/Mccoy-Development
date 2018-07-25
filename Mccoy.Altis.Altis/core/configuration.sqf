@@ -51,9 +51,11 @@ life_markers_active = false;
 life_canpay_bail = true;
 life_storagePlacing = scriptNull;
 
+*/
 *****************************
 ****** Variables Added By IEthanHD *****
 *****************************
+*/
 mav_ttm_var_civLoadout = 0; //--- BackPack
 mav_ttm_var_repair_speed = 1; //--- Repair Speed
 
