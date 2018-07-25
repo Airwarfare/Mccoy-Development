@@ -46,17 +46,28 @@ if (!isNull _source) then {
         };
     };
 } else {
-    if(life_seatbelt) then {
-        _damage = _damage * 0.25;
-    } else {
-        _r = random[0,50,100] / 100;
-        if(_r <= .25) then {
-            player setUnconscious true;
-            [] spawn {
-                sleep 300; //5 Mins
-                player setUnconscious false;
+    if(vehicle player != player) then { // Then they must be in a vehicle!
+        if(life_seatbelt) then {
+            _damage = _damage * 0.25;
+        } else {
+            if(speed vehicle player >= 78) then {
+                _r = random[0,50,100] / 100;
+                if(_r <= .25) then {
+                    player setUnconscious true;
+                    [] spawn {
+                        _handle = ppEffectCreate["RadialBlur", 2010]; 
+                        _handle ppEffectEnable true; 
+                        _handle ppEffectAdjust [0.01, 0.01, 0.06, 0.06];  
+                        _handle ppEffectCommit 0;
+                        player playMoveNow "kia_driver_mid01";
+                        sleep 60*3; //3 Mins
+                        player setUnconscious false;
+                        ppEffectDestroy _handle;
+                        player switchMove "driver_offroad01";
+                    };
+                };  
             };
-        };  
+        };
     };
 };
 
