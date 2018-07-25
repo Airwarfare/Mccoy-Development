@@ -6,31 +6,27 @@ overviewText = "$STR_MISC_overviewText";    // Text to be displayed below the ov
 #include "CfgRemoteExec.hpp"
 #include "dialog\MasterHandler.hpp"
 #include "config\Config_Master.hpp"
+#include "infiSTAR_AdminMenu.hpp"
 #include "maverick\maverick_master.cpp"
-
-
-class CfgServer {
-    DatabaseName = "altislife"; //Config name that'll be grep in the extdb-conf.ini. Default: [altislife]
-    DebugMode = 0; //Enable many server/hc debugging logs. Default: 0 (1 = Enabled / 0 = Disabled)
-    HeadlessSupport = 0; //Enable/Disable Headless client support. Default: 1 (1 = Enabled / 0 = Disabled)
-    /*
-    Enabled: When HeadlessSupport is set to 1 (enabled), the server will run without fault when no Headless Client is connected. However, it will support the Headless Client if you choose to connect one.
-    Disabled: If HeadlessSupport is set to 0 (disabled), the connection of a Headless Client will make no difference. This option will increase server performance a TINY but negligible amount.
-    */
-};
 
 class RscTitles {
     #include "dialog\progress.hpp"
     #include "dialog\hud_nameTags.hpp"
     #include "dialog\hud_stats.hpp"
     #include "maverick\talent-tree-modular\gui\_masterTitles.cpp"
-	#include "maverick\maverick_titles_master.cpp"
+    #include "maverick\maverick_titles_master.cpp"
 };
 
 class CfgFunctions {
     #include "Functions.hpp"
     #include "maverick\maverick_functions_master.cpp"
 	
+};
+
+class CfgServer {
+    DatabaseName = "altislife";
+    DebugMode = 0;
+    HeadlessSupport = 0;
 };
 
 class CfgSounds {
@@ -192,4 +188,3 @@ class CfgNotifications {
     };
 };
 
-#include "infiSTAR_AdminMenu.hpp"
