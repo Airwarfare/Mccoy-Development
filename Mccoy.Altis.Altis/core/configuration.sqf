@@ -51,7 +51,7 @@ life_markers_active = false;
 life_canpay_bail = true;
 life_storagePlacing = scriptNull;
 
-*/
+/*
 *****************************
 ****** Variables Added By IEthanHD *****
 *****************************
