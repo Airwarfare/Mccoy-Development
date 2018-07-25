@@ -51,6 +51,11 @@ life_markers_active = false;
 life_canpay_bail = true;
 life_storagePlacing = scriptNull;
 
+*****************************
+****** Variables Added By IEthanHD *****
+*****************************
+mav_ttm_var_civLoadout = 0;
+
 //Settings
 life_settings_enableNewsBroadcast = profileNamespace getVariable ["life_enableNewsBroadcast",true];
 life_settings_enableSidechannel = profileNamespace getVariable ["life_enableSidechannel",true];
