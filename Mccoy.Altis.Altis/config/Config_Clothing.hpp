@@ -105,10 +105,10 @@ class Clothing {
             { "B_AssaultPack_cbr", "", 2000, "" },
             { "B_AssaultPack_mcamo", "", 2000, "" },
             { "B_AssaultPack_tna_f", "", 2000, "" }, //Apex DLC
-            { "B_TacticalPack_oli", "", 2500, "" },
-            { "B_Kitbag_mcamo", "", 3500, "" },
-            { "B_Kitbag_sgg", "", 3500, "" },
-            { "B_Kitbag_cbr", "", 3500, "" },
+            { "B_TacticalPack_oli", "", 2500, "mav_ttm_var_civLoadout >= 1" }, //--- Tactical Backpack Perk Needed
+            { "B_Kitbag_mcamo", "", 3500, "mav_ttm_var_civLoadout >= 2" }, //--- Kitbag Pack Perk Needed
+            { "B_Kitbag_sgg", "", 3500, "mav_ttm_var_civLoadout >= 2" }, //--- Kitbag Pack Perk Needed
+            { "B_Kitbag_cbr", "", 3500, "mav_ttm_var_civLoadout >= 2" }, //--- Kitbag Pack Perk Needed
             { "B_FieldPack_blk", "", 5000, "" },
             { "B_FieldPack_ocamo", "", 5000, "" },
             { "B_FieldPack_oucamo", "", 5000, "" },
@@ -117,15 +117,13 @@ class Clothing {
             { "B_Bergen_mcamo", "", 6500, "" },
             { "B_Bergen_rgr", "", 6500, "" },
             { "B_Bergen_blk", "", 6500, "" },
-            { "B_Carryall_ocamo", "", 7500, "" },
-            { "B_Carryall_oucamo", "", 7500, "" },
-            { "B_Carryall_mcamo", "", 7500, "" },
-            { "B_Carryall_oli", "", 7500, "" },
-            { "B_Carryall_khk", "", 7500, "" },
-            { "B_Carryall_cbr", "", 7500, "" },
-            { "B_Carryall_ghex_f", "", 7500, "" }, //Apex DLC
-            { "B_Bergen_dgtl_f", "", 9500, "" }, //Apex DLC
-            { "B_Bergen_tna_f", "", 9500, "" } //Apex DLC
+            { "B_Carryall_ocamo", "", 7500, "mav_ttm_var_civLoadout >= 3" }, //--- Carryall Backpack Perk Needed
+            { "B_Carryall_oucamo", "", 7500, "mav_ttm_var_civLoadout >= 3" }, //--- Carryall Backpack Perk Needed
+            { "B_Carryall_mcamo", "", 7500, "mav_ttm_var_civLoadout >= 3" }, //--- Carryall Backpack Perk Needed
+            { "B_Carryall_oli", "", 7500, "mav_ttm_var_civLoadout >= 3" }, //--- Carryall Backpack Perk Needed
+            { "B_Carryall_khk", "", 7500, "mav_ttm_var_civLoadout >= 3" }, //--- Carryall Backpack Perk Needed
+            { "B_Carryall_cbr", "", 7500, "mav_ttm_var_civLoadout >= 3" }, //--- Carryall Backpack Perk Needed
+            { "B_Carryall_ghex_f", "", 7500, "mav_ttm_var_civLoadout >= 3" } //--- Carryall Backpack Perk Needed
         };
     };
 
